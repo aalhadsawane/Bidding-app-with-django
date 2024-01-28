@@ -1,0 +1,2 @@
+# Bidding app with django
+ 

@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block createjob %}
+<form method="POST" action="">
+    {% csrf_token %}
+    <hr>
+    
+    {{form}}
+    <h4>
+    <input type="submit" name="Create job for auction" style="font-size:23px">
+    </h4>
+    </h3>
+    <hr>
+</form>
+{% endblock createjob %}

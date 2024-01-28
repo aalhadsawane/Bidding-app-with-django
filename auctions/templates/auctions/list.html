@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block list %}
+    {% for auction in auctions %}
+        <h3>
+        <span>This auction if for " {{auction.title}} "</span>
+        <br>
+        <span>The highest bid is '{{auction.get_highest_bid_amt}}'</span>
+        <a href="{% url 'make-bid' %}"><button>Make bid</button></a>
+        <br>
+        <span>This bid was placed by {{auction.get_highest_bid}}</span>
+        <br>
+        Other bids were:
+        {% for bid in  auction.bids%}
+
+        {{bid.bid_amt}} by {{bid.bidder}},
+        {% endfor %}
+        <hr>
+    {% endfor %}
+{% endblock list %}
