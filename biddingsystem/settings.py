@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-unznceab)hif5txsjnyff&*kmvv3l()_nqbamj=9xokx_=n!3r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['192.168.1.50', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -76,8 +75,12 @@ WSGI_APPLICATION = 'biddingsystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'biddingsystem',
+        'USER': "aalhad",
+        'PASSWORD': "pass",
+        "HOST": "localhost",
+        "PORT": "5432"
     }
 }
 
